@@ -1,0 +1,21 @@
+const ModelCachorro = require('../models/cachorro')
+
+class ServiceCachorro {
+    GetCachorros() {
+        return ModelCachorro.GetCachorros()
+    }
+
+    CriarCachorro(name, raca) {
+        return ModelCachorro.CriarCachorro(name, raca)
+    }
+
+    UpdateCachorro(id, name, raca) {
+        return ModelCachorro.UpdateCachorro(id, name, raca)
+    }
+
+    DeleteCachorro(id) {
+        return ModelCachorro.DeleteCachorro(id)
+    }
+}
+
+module.exports = new ServiceCachorro()
